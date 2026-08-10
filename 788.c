@@ -8,7 +8,6 @@ int main()
   int a = 0;
     system("chcp 65001>nul"); // 设置控制台为UTF-8编码
     setlocale(LC_ALL, "zh_CN.UTF-8");
-    srand((unsigned int)time(NULL));
     a = rand()%100+1;
     int b = 0;
     int c = 0;
