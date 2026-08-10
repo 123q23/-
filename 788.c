@@ -59,7 +59,7 @@ int main()
         }
         if(c>=5)
       {
-        printf("你已经猜了6次了,游戏结束!\n");
+        printf("你已经猜了5次了,游戏结束!\n");
         printf("答案是：%d\n", a);
         break;
       }
