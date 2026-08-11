@@ -6,11 +6,27 @@
 int main()
 {
   int a = 0;
-    system("chcp 65001>nul"); // 设置控制台为UTF-8编码
+    system("chcp 65001>nu1"); // 设置控制台为UTF-8编码
     setlocale(LC_ALL, "zh_CN.UTF-8");
+    srand((unsigned int)time(NULL));
     a = rand()%100+1;
     int b = 0;
     int c = 0;
+    int d = 0;
+    char y;
+    printf("按y开始:"); 
+    scanf("%c",&y); 
+    if(y == 'y')
+    {
+     ++d;
+    }
+    else
+    {
+      printf("输入错误");
+    }
+    while(d>0)
+    {
+
     do
     {
       printf("请输入一个整数:");
@@ -52,12 +68,14 @@ int main()
         }
         else
         {
+          --d;
             printf("恭喜你，猜对了！\n");
             printf("答案是：%d\n", a);
             break;
         }
         if(c>=5)
       {
+        --d;
         printf("你已经猜了5次了,游戏结束!\n");
         printf("答案是：%d\n", a);
         break;
@@ -77,5 +95,6 @@ int main()
     }
       
     while(1);
+  }
     return 0;
 }
