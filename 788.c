@@ -12,20 +12,24 @@ int main()
     a = rand()%100+1;
     int b = 0;
     int c = 0;
-    int d = 0;
     char y;
+
+    while(1)
+    {
     printf("按y开始:"); 
     scanf("%c",&y); 
     if(y == 'y')
     {
-     ++d;
+     break;
     }
     else
     {
-      printf("输入错误");
+      printf("输入错误\n");
+      while(getchar()!='\n'); // 清除输入缓冲区中的换行符
+            continue;
     }
-    while(d>0)
-    {
+  }
+
 
     do
     {
@@ -68,14 +72,15 @@ int main()
         }
         else
         {
-          --d;
+          
             printf("恭喜你，猜对了！\n");
             printf("答案是：%d\n", a);
             break;
+
         }
         if(c>=5)
       {
-        --d;
+       
         printf("你已经猜了5次了,游戏结束!\n");
         printf("答案是：%d\n", a);
         break;
@@ -95,6 +100,5 @@ int main()
     }
       
     while(1);
-  }
     return 0;
 }
